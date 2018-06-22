@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <title>Frederick Game Works</title>
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Frederick Game Works</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <div class="jumbotron">
+                <h1 class="text-center">
+                    <strong>Car Trivia</strong>
+                    <p>Answer The Questions Before Time Runs Out</p>
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="timerDown" class="card text-white bg-dark mb-3">
+                        <h4 class="card-header">Timer</h4>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h3>
+                                    <span id="countdownTimer"></span>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="question1" class="card">
+                        <h4 class="card-header">Question 1</h4>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h3>
+                                    <span id="questionBlock1">What Manufacturer carries the slogan "La Meccanica Delle Emozioni"?</span>
+                                    <br>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value=0>
+                                        <label class="form-check-label" for="inlineRadio1">Ferrari</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value=0>
+                                        <label class="form-check-label" for="inlineRadio2">Peugeot</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value=1>
+                                        <label class="form-check-label" for="inlineRadio3">Alfa Romeo</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value=0>
+                                        <label class="form-check-label" for="inlineRadio4">Venturi</label>
+                                    </div>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="question2" class="card">
+                        <h4 class="card-header">Question 2</h4>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h3>
+                                    <span id="questionBlock2">Which car holds the Guinness World Record for being the fastest in the world?</span>
+                                    <br>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio5" value="0">
+                                        <label class="form-check-label" for="inlineRadio5">Bugatti Veyron</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio6" value="0">
+                                        <label class="form-check-label" for="inlineRadio6">Bugatti Chiron</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio7" value="1">
+                                        <label class="form-check-label" for="inlineRadio7">Koenigsegg Agera RS</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio8" value="0">
+                                        <label class="form-check-label" for="inlineRadio8">Koenigsegg Regera</label>
+                                    </div>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="question3" class="card">
+                        <h4 class="card-header">Question 3</h4>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h3>
+                                    <span id="questionBlock3">The Volvo S60 sedan is manufactured in which country?</span>
+                                    <br>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio9" value="0">
+                                        <label class="form-check-label" for="inlineRadio9">Italy</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio10" value="0">
+                                        <label class="form-check-label" for="inlineRadio10">Sweden</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio11" value="1">
+                                        <label class="form-check-label" for="inlineRadio11">America</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio12" value="0">
+                                        <label class="form-check-label" for="inlineRadio12">Switzerland</label>
+                                    </div>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="question4" class="card">
+                        <h4 class="card-header">Question 4</h4>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h3>
+                                    <span id="questionBlock4">In most James Bond movies, which manufacturer often portrays the villain?</span>
+                                    <br>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio13" value="0">
+                                        <label class="form-check-label" for="inlineRadio13">Aston Martin</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio14" value="0">
+                                        <label class="form-check-label" for="inlineRadio14">BMW</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio15" value="1">
+                                        <label class="form-check-label" for="inlineRadio15">Jaguar</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio16" value="0">
+                                        <label class="form-check-label" for="inlineRadio16">Porsche</label>
+                                    </div>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="question5" class="card">
+                        <h4 class="card-header">Question 5</h4>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h3>
+                                    <span id="questionBlock4">"Doppelkupplungsgetriebe" is Porsche for what?</span>
+                                    <br>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio17" value="0">
+                                        <label class="form-check-label" for="inlineRadio17">Market Price</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio18" value="0">
+                                        <label class="form-check-label" for="inlineRadio18">Stuttgart Engineered</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio19" value="1">
+                                        <label class="form-check-label" for="inlineRadio19">Dual-Clutch Transmission</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio20" value="0">
+                                        <label class="form-check-label" for="inlineRadio20">Dual-Clutch Brakes</label>
+                                    </div>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="question6" class="card">
+                        <h4 class="card-header">Question 6</h4>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h3>
+                                    <span id="questionBlock4">Some say that in the Summer, he gets rather hot and brittle, and that if he were playing
+                                        for Portugal, he wouldn't go into a dive when punched by a fly. All we know is, he's
+                                        called what?</span>
+                                    <br>
+                                    <br>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio21" value="0">
+                                        <label class="form-check-label" for="inlineRadio21">Pepe</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio22" value="1">
+                                        <label class="form-check-label" for="inlineRadio22">The Stig</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio23" value="0">
+                                        <label class="form-check-label" for="inlineRadio23">Lord March</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio24" value="0">
+                                        <label class="form-check-label" for="inlineRadio24">Jeremy Clarkson</label>
+                                    </div>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-12">
+                    <button id="SubmitAnswers" type="button" class="btn btn-primary btn-lg btn-block">Submit Answers</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                    <div class="col-lg-12">
+                        <div id="results" class="card">
+                            <h4 class="card-header">Results</h4>
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h3>
+                                        <span id="resultBlock"></span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br> 
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+    </body>
+
+</html>
