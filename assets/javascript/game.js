@@ -13,14 +13,14 @@ window.onload = function () {
         load: function () {
             countTimer.time = 0;
             console.log(counter);
-            
+
 
         },
 
         start: function () {
             // if (!counter) {
-                intervalId = setInterval(countTimer.count, 1000);
-                counter = 600;
+            intervalId = setInterval(countTimer.count, 1000);
+            counter = 600;
             // }
 
         },
@@ -30,14 +30,14 @@ window.onload = function () {
             // console.log("counter = " + counter);
             // $("#countdownTimer").html(counter);
 
-        
+
             var displayTime = countTimer.timeConverter(counter);
             $("#countdownTimer").html(displayTime);
-            
-            if (counter === 0){
+
+            if (counter === 0) {
                 clearInterval(intervalId);
                 // alert("Time's Up");
-                $("#resultBlock").append("Time's Up!");
+                $("#resultBlock").html("Time's Up!");
                 $("#SubmitAnswers").attr("disabled", "disabled");
             }
 
@@ -65,14 +65,14 @@ window.onload = function () {
 
             return minutes + ":" + seconds;
         }
-        
+
     }
     countTimer.start();
 
     var selValue = 0;
 
-    $(document).ready(function(){
-        $("#SubmitAnswers").click(function(){
+    $(document).ready(function () {
+        $("#SubmitAnswers").click(function () {
             selValue = parseInt($("input[name=inlineRadioOptions]:checked").val());
             selValue += parseInt($("input[name=inlineRadioOptions1]:checked").val());
             console.log(selValue);
@@ -88,12 +88,12 @@ window.onload = function () {
             // selValue += Number($("input[name=inlineRadioOptions3]:checked").val());
             // selValue += Number($("input[name=inlineRadioOptions4]:checked").val());
             // selValue += Number($("input[name=inlineRadioOptions5]:checked").val());
-            if (selValue === 6){
+            if (selValue === 6) {
                 $("#resultBlock").html("Answers Correct: " + selValue + " out of 6");
                 $("#resultBlock").append("<br>Well Done!");
             }
-            
-            else if(selValue < 6){
+
+            else if (selValue < 6) {
                 $("#resultBlock").html("Answers Correct: " + selValue + " out of 6");
                 $("#resultBlock").append("<br>Keep Trying");
             }
