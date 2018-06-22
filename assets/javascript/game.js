@@ -27,7 +27,7 @@ window.onload = function () {
 
         count: function () {
             counter--;
-            console.log("counter = " + counter);
+            // console.log("counter = " + counter);
             // $("#countdownTimer").html(counter);
 
         
@@ -36,7 +36,9 @@ window.onload = function () {
             
             if (counter === 0){
                 clearInterval(intervalId);
-                alert("Time's Up");
+                // alert("Time's Up");
+                $("#resultBlock").append("Time's Up!");
+                $("#SubmitAnswers").attr("disabled", "disabled");
             }
 
             // var displayTime = countTimer.timeConverter(countTimer.time);
@@ -71,27 +73,31 @@ window.onload = function () {
 
     $(document).ready(function(){
         $("#SubmitAnswers").click(function(){
-            selValue = $("input[name=inlineRadioOptions]:checked").val();
-            selValue += $("input[name=inlineRadioOptions1]:checked").val();
-            selValue += $("input[name=inlineRadioOptions2]:checked").val();
-            selValue += $("input[name=inlineRadioOptions3]:checked").val();
-            selValue += $("input[name=inlineRadioOptions4]:checked").val();
-            selValue += $("input[name=inlineRadioOptions5]:checked").val();
+            selValue = parseInt($("input[name=inlineRadioOptions]:checked").val());
+            selValue += parseInt($("input[name=inlineRadioOptions1]:checked").val());
+            console.log(selValue);
+            selValue += parseInt($("input[name=inlineRadioOptions2]:checked").val());
+            selValue += parseInt($("input[name=inlineRadioOptions3]:checked").val());
+            console.log(selValue);
+            selValue += parseInt($("input[name=inlineRadioOptions4]:checked").val());
+            selValue += parseInt($("input[name=inlineRadioOptions5]:checked").val());
+            console.log(selValue);
             // selValue += Number($("input[name=inlineRadioOptions1]:checked").val());
             // selValue += Number($("input[name=inlineRadioOptions]:checked").val());
             // selValue += Number($("input[name=inlineRadioOptions2]:checked").val());
             // selValue += Number($("input[name=inlineRadioOptions3]:checked").val());
             // selValue += Number($("input[name=inlineRadioOptions4]:checked").val());
             // selValue += Number($("input[name=inlineRadioOptions5]:checked").val());
-            console.log(selValue);
-            if (selValue === "111111"){
-                $("#resultBlock").html("Answers Correct: 6 out of 6");
+            if (selValue === 6){
+                $("#resultBlock").html("Answers Correct: " + selValue + " out of 6");
                 $("#resultBlock").append("<br>Well Done!");
             }
-            // else if (selValue <= 6 && selValue >= 1){
-            //     $("#resultBlock").html("Answers Correct: " + selValue + " out of 6");
-            //     $("#resultBlock").append("<br>You're Somewhat Car Knowledgable");
-            // }
+            
+            else if(selValue < 6){
+                $("#resultBlock").html("Answers Correct: " + selValue + " out of 6");
+                $("#resultBlock").append("<br>Keep Trying");
+            }
+
             else {
                 $("#resultBlock").html("Answers Correct: 0 out of 6");
                 $("#resultBlock").append("<br>Read More Car & Driver!");
